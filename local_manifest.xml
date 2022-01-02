@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	
+	<!-- Remotes -->
+	    <remote name="sahilhv"
+		fetch="https://github.com/sahilhv" />
+	
+	    <remote name="Uni"
+		fetch="https://github.com/GhostMaster69-dev"/>
+	
+	    <remote name="clang"
+		fetch="https://github.com/kdrag0n" />
+		
+
+ 		<!-- Trees -->
+         <project path="device/xiaomi/vince" name="device_xiaomi_vince" remote="sahilhv" revision="11" />
+     	<project path="vendor/xiaomi/vince" name="vendor_xiaomi_vince" remote="sahilhv" revision="arrow-11.0" clone-depth="1" />
+     	<project path="kernel/xiaomi/vince" name="android_kernel_xiaomi_vince" remote="Uni" revision="stable" clone-depth="1" />
+     	<project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="clang" revision="master" clone-depth="1" />
+	
+		<!-- Remove hal's -->
+        <remove-project name="LineageOS/android_hardware_qcom_audio" />
+		<remove-project name="LineageOS/android_hardware_qcom_display" />
+		<remove-project name="LineageOS/android_hardware_qcom_media" />
+      
+        <!--clonehals-->
+        <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="line" revision="lineage-18.1-caf-msm8996" />
+		<project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="line" revision="lineage-18.1-caf-msm8996" />
+		<project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="line" revision="lineage-18.1-caf-msm8996" />
+		
+</manifest>
